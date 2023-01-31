@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>interfaz</title>
+        <link href="interfaz.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Blaka&family=Kdam+Thmor+Pro&family=Space+Mono&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <section class="interfaz">
+            <section class="left-container">
+                <div class="left-title-container">
+                    <h1>EL JUEGO DEL GORDO</h1>
+                </div>
+                <div class="form-container">
+                    <form>
+                        <h2>Log In</h2>
+                        <div class="input-container">
+                            <div class="group">
+                                <input type="text" class="entradas" id="aka" onclick="subirAka()">
+                                <label for="aka" class="lavels aka">A.K.A</label>
+                            </div> 
+                            <div class="group">
+                                <input type="text" class="entradas" id="age" onclick="subirAge()">
+                                <label for="age" class="lavels age">Age</label>
+                            </div>
+                            <div class="group">
+                                <input type="password" class="entradas" id="password" onclick="subirPassword()">
+                                <label for="password" class="lavels password">Password</label>
+                            </div>  
+                            <input type="button" id="boton" value="Go on!" onclick="magia()">
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="right-container">
+                <div class="right-title-container">
+                    <h1>CHOOSE YOU CARACTER</h1>
+                </div>
+                <div class="caracters-container">
+                    <div class="caracter uno" onclick="michael()"></div> 
+                    <div class="caracter dos" onclick="bebe()"></div> 
+                    <div class="caracter tres" onclick="rodrigo()"></div>                 
+                </div>
+                <div class="play-container"><a href="#juego" class="play"><h4>Lets play</h4></a></div>    
+            </section>
+        </section>
+        <section class="juego" id="juego">
+            <div class="cron-container">
+                <div class="cronometro">
+                    <div class="pantallita"></div>
+                    <input type="button" class="boton" value="Start" onclick="start()">
+                </div>
+            </div>
+                <section class="main">
+                    <div class="pantalla"></div>
+                    <div class="cancha">
+                        <div class="player"></div>
+                    </div>           
+                </section>
+                <div class="boton-container"><a href="javascript:location.reload()" class="reset"><img src="reset.png"></a></div>
+        </section>
+        <script src="juego.js"></script>
+    </body>
+</html>

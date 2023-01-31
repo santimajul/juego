@@ -1,0 +1,106 @@
+/*JUEGO*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background: url("cancha.jpg");
+}
+
+.main{
+    height: 100vh;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.pantalla{
+    height: 80px;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 2%;
+    background-color: #DEA057;
+    color: white;
+    border: 10px dotted #FCFFE7;
+    font-size: 60px;
+    font-family: 'Blaka', cursive;
+    text-align: center;
+}
+
+.cancha{
+    height: 500px;
+    width: 500px;
+    border: 10px dotted #FCFFE7;
+    background-color: #E0D8B0;
+    margin: 0 auto;
+}
+
+.cron-container{
+    height: 100vh;
+    width: 25%;
+}
+
+.cronometro{
+    background-color: #3A5BA0;
+    height: 200px;
+    width: 300px;
+    position: static;
+    margin-top: 200px;
+    margin-left: 50px;
+    padding: 10px auto;
+    border: black solid 3px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px;
+}
+
+.pantallita{
+    height: 100px;
+    width: 80%;
+    margin: 10px auto;
+    padding-top: 5px ;
+    background-color: #FFE5B4;
+    color: #1F4690;
+    font-size: 30px;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    opacity: .8;
+    border: 3px solid black;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+
+.boton{
+    height: 60px;
+    width: 80%;
+    background-color: #FFA500;
+    color: white;
+    margin-left: 10%;
+    cursor: pointer;
+}
+
+.player{
+    background-size: cover;
+    height: 80px;
+    width: 80px;
+    border-radius: 35px;
+}
+
+.boton-container{
+    height:100vh;
+    width: 25%;
+    float: left;   
+}
+
+.reset img{
+    height: 150px;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 70vh;
+}
+
+
+

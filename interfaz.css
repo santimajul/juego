@@ -1,0 +1,304 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+/*INTERFAZ*/
+
+.interfaz{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffd33b;
+}
+
+.left-container{
+    float: left;
+    width: 50%;   
+}
+
+.left-title-container{
+    height: 10%;
+    width: 80%;
+    margin: 10vh auto;
+    font-size: 25px;
+    font-family: sans-serif;
+    padding-top: 15px;
+    text-align: center;
+    color: #fffaf2;
+    background-color: #371606;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #fffaf2;
+}
+
+.right-container{
+    float: right;
+    width: 50%;
+}
+
+.form-container{
+    height: 60%;
+    width: 100%;
+    display: flex;   
+}
+
+form{
+    height: 80%;
+    width: 40%;
+    margin: 0 auto;
+    background-color: #fffb5b;
+    padding: 30px 20px;
+    border-radius: 10px;
+    color: #8d8377;
+    
+}
+
+form h2{
+    font-family: 'Blaka', cursive;
+    font-size: 2em;
+    text-align: center;
+}
+
+.input-container{
+    margin-top: 30px ;
+    display: grid;
+    gap: 2.5em;
+
+}
+
+.group{
+    position:relative;
+}
+
+.entradas{
+    height: 1.5em;
+    width: 90%;
+    background-color: #fffb5b;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #8d8377;
+}
+
+.lavels{
+    position: absolute;
+    font-size: 15px;
+    color: #8d8377;
+    opacity: 0.8;
+    margin-left: -220px;
+}
+
+#boton{
+    padding: 10px 40px;
+    margin: auto;
+    border-radius: 5px;
+    font-family: sans-serif;
+    color: white;
+    background-color: #371606;
+}
+
+.right-title-container{
+    height: 10vh;
+    width: 80%;
+    font-size: 25px;
+    font-family: sans-serif;
+    padding-top: 15px;
+    margin: -15vh auto;
+    text-align: center;
+    color: #fffaf2;
+    background-color: #371606;
+    border-radius: 10px;
+    transition: transform 1s;
+}
+
+.caracters-container{
+    height: 70vh;
+    width: 100%; 
+    display: flex; 
+    flex:content;
+    justify-content: center;  
+}
+
+.caracter{
+    border: 5px dashed black;
+    height: 40%;
+    width: 25%;
+    float: left;
+    margin: 50% 20px;
+    cursor: pointer;
+}
+
+.uno{
+    
+    background-image: url("player.png");
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.dos{
+    background-image: url("player1.png");
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 3s;
+}
+
+.tres{
+    background-image: url("player2.png");
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 5s;
+}
+
+.play-container{
+    height: 30vh;
+    width: 100%;
+    display: flex;
+}
+
+.play{
+    height: 40%;
+    width: 40%;
+    background-color: #fffb5b;
+    padding: auto 0;
+    text-align: center;
+    margin: 150px auto 0;
+    text-decoration: none;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.play h4{
+    font-size: 30px;
+    font-family: sans-serif;    
+    color: #371606;
+    padding-top: 20px;
+}
+
+.play:hover{
+    box-shadow: 5px 5px 5px #371606;
+}
+
+/*JUEGO*/
+
+.juego{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background: url("cancha.jpg");
+
+    --opacity: 0;
+    --pointer: none;
+
+    opacity: var(--opacity);
+    pointer-events: var(--pointer);
+}
+
+.juego:target{
+    --opacity: 1;
+    --pointer: unset;
+}
+
+.main{
+    height: 100vh;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.pantalla{
+    height: 80px;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 2%;
+    background-color: #DEA057;
+    color: white;
+    border: 10px dotted #FCFFE7;
+    font-size: 60px;
+    font-family: 'Blaka', cursive;
+    text-align: center;
+}
+
+.cancha{
+    height: 500px;
+    width: 500px;
+    border: 10px dotted #FCFFE7;
+    background-color: #E0D8B0;
+    margin: 0 auto;
+}
+
+.cron-container{
+    height: 100vh;
+    width: 25%;
+}
+
+.cronometro{
+    background-color: #3A5BA0;
+    height: 200px;
+    width: 300px;
+    position: static;
+    margin-top: 200px;
+    margin-left: 50px;
+    padding: 10px auto;
+    border: black solid 3px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px;
+}
+
+.pantallita{
+    height: 100px;
+    width: 80%;
+    margin: 10px auto;
+    padding-top: 5px ;
+    background-color: #FFE5B4;
+    color: #1F4690;
+    font-size: 30px;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    opacity: .8;
+    border: 3px solid black;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+
+.boton{
+    height: 60px;
+    width: 80%;
+    background-color: #FFA500;
+    color: white;
+    margin-left: 10%;
+    cursor: pointer;
+}
+
+.player{
+    background-image: url("player1.png");
+    background-size: cover;
+    height: 80px;
+    width: 80px;
+    border-radius: 35px;
+}
+
+.boton-container{
+    height:100vh;
+    width: 25%;
+    float: left;   
+}
+
+.reset img{
+    height: 150px;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 70vh;
+}
+
+
+
